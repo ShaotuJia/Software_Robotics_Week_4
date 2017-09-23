@@ -2,7 +2,7 @@
 
 #include<iostream>
 
-void dummy()
+int dummy()
 {
-    std::cout << "HI" << std::endl;
+    return 1;
 }
