@@ -1,5 +1,11 @@
 set(GTEST_SHUFFLE 1)
 
+#add include directory
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include
+)
+
+#add excutable files
 add_executable(
     cpp-test
     main.cpp
