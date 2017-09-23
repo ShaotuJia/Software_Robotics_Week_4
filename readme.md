@@ -1,6 +1,6 @@
 # C++ Boilerplate
 [![Build Status](https://travis-ci.org/ShaotuJia/Software_Robotics_Week_4.svg?branch=master)](https://travis-ci.org/ShaotuJia/Software_Robotics_Week_4)
-[![Coverage Status](https://coveralls.io/repos/github/dpiet/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dpiet/cpp-boilerplate?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ShaotuJia/Software_Robotics_Week_4/badge.svg?branch=master)](https://coveralls.io/github/ShaotuJia/Software_Robotics_Week_4?branch=master)
 ---
 
 ## Overview
