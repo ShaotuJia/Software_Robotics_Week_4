@@ -55,7 +55,7 @@ TEST(PIDTest, ComputationTest) {
   /**
    * !!! change the tuning parameter to pass the last test !!
    */
-  p->tuning(0.1, 0.1, 0);
+  p->tuning(1, 2, 3);
   p->compute();
   EXPECT_LT(std::abs(p->output - input), 0.1);
 }
