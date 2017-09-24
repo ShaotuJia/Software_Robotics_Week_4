@@ -7,11 +7,12 @@ include_directories(
 
 #add excutable files
 add_executable(
-    cpp-test
+    PID-test
     main.cpp
     test.cpp
+    ../include/PID.cpp
 )
 
-target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
+target_include_directories(PID-test PUBLIC ../vendor/googletest/googletest/include 
                                            ${CMAKE_SOURCE_DIR}/include)
-target_link_libraries(cpp-test PUBLIC gtest)
+target_link_libraries(PID-test PUBLIC gtest)

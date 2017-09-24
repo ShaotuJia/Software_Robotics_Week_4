@@ -33,8 +33,10 @@ class PID {
      double e_l = 0;    ///< The error in last time
      double e_total = 0;    ///< The total error during computation
      double tolerance = 0.1;    ///< The tolerance for error
-     double time_to_stable = 0;
+
  public:
+    double time_to_stable = 0;    ///< time to stabilized
+    double output = 0;                ///< final output after computation
     PID(double input):setpoint(input){};
     void tuning(double Kp_input, double Ki_input, double Kd_input);
     void get_error(const double& process_variable);

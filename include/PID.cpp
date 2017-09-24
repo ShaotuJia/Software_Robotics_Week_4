@@ -1,5 +1,5 @@
 /**
- * @breif This is the source file for class PID
+ * @Brief This is the source file for class PID
  * @file PID.hpp This is the header file of PID class
  * @copyright, Shaotu Jia, All rights reserved
  */
@@ -37,6 +37,7 @@ void PID::compute() {
         e_l = e_c;    ///< pass current error to last time error
         if (std::abs(e_c) < tolerance) {
             time_to_stable = t * time_interval;
+            output = setpoint - e_c;
             break;
         }
     }
@@ -47,6 +48,7 @@ PID::~PID() {
         std::cout << "Successful tuning !!\n";
         std::cout << "The current error: " << e_c << "\n";
         std::cout << "The time to stable: " << time_to_stable << "\n";
+        std::cout << "Final output: " << output << "\n";
     } else {
         std::cout << "Unacceptable tuning !! Please try again !!\n";
         std::cout << "The current error: " << e_c <<"\n";
