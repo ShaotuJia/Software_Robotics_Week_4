@@ -5,21 +5,18 @@
 
 ## Overview
 
-Simple starter C++ project with:
-
-- cmake
-- googletest
+This project is to create a new class declaration for a PID controller (Links to an external site.) that computes a new velocity given a target setpoint and actual velocity.
 
 ## Standard install via command-line
 ```
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
+git clone --recursive https://github.com/ShaotuJia/Software_Robotics_Week_4
 cd <path to repository>
 mkdir build
 cd build
 cmake ..
 make
-Run tests: ./test/cpp-test
-Run program: ./app/shell-app
+Run tests: ./test/PID-test
+Run program: ./app/PID_controller_app
 ```
 
 ## Building for code coverage (for assignments beginning in Week 4)
