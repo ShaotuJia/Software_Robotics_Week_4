@@ -50,7 +50,7 @@ double PID::integrate(const double& e_c) {
  * @param e_l The error in last time feedback loop
  * @return the value of differential term
  */
-double PID::diferentiate(const double& e_c, const double& e_l) {
+double PID::differentiate(const double& e_c, const double& e_l) {
     return ((e_c - e_l) * Kd);
 }
 
@@ -61,7 +61,7 @@ void PID::compute() {
     for (int t = 0; t <= run_time/time_interval; t++) {
         get_error(process_variable);
         process_variable = proportion(e_c) + integrate(e_c)\
-            + diferentiate(e_c, e_l);
+            + differentiate(e_c, e_l);
         e_l = e_c;    ///< pass current error to last time error
         if (std::abs(e_c) < tolerance) {
             time_to_stable = t * time_interval;

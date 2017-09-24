@@ -44,7 +44,7 @@ class PID {
     void get_error(const double& process_variable);
     double proportion(const double&);
     double integrate(const double&);
-    double diferentiate(const double&, const double&);
+    double differentiate(const double&, const double&);
     void compute();
     ~PID();
 };
