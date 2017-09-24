@@ -7,6 +7,9 @@
 
 This project is to create a new class declaration for a PID controller (Links to an external site.) that computes a new velocity given a target setpoint and actual velocity.
 
+## UML Class Diagram
+![Alt text](https://github.com/ShaotuJia/Software_Robotics_Week_4/blob/master/PID_UML.png?raw=true "PID UML Diagram")
+
 ## Standard install via command-line
 ```
 git clone --recursive https://github.com/ShaotuJia/Software_Robotics_Week_4
