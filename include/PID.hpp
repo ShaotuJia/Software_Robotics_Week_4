@@ -12,12 +12,14 @@
 /**
  * @breif This class is for PID controller; All computation will be done
  * in discrete time and the controll will be processed in 10 seconds.
+ * @constructor Initialize the setpoint
  * @func tunning This function is to set up Kp, Ki, Kd
  * @func get_error This function is to get the real time error of system
  * @func proportion This function is to compute the proportional term in PID
  * @func integrate This function is to compute the integration term in PID
  * @func differentiate This function is to compute the differential term in PID
  * @func compute This function is to compute the output for PID controller
+ * @destructor print computation results
  */
 
 class PID {

@@ -2,6 +2,7 @@
  * @Brief This file is the main function that configure and run PID controller
  * @author Shaotu Jia
  * @copyright, Shaotu Jia, All rights reserved
+ * @file PID.hpp The header file for PID class
  */
 
 
