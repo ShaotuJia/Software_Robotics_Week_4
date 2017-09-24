@@ -1,5 +1,5 @@
 /**
- * @breif: This
+ * @breif: This file is to implement the PID class
  * @copyright, Shaotu Jia, All rights reserved
  */
 
@@ -22,9 +22,9 @@
 
 class PID {
  private:
-     double setpoint = 0;
+     double setpoint = 0;    ///< The setpoint in controller
      double run_time = 10;   ///< The total run time of PID controller
-     double time_interval = 0.1; ///< The time interval for computation
+     double time_interval = 0.001; ///< The time interval for computation 1ms
      double Kp = 0;     ///< The proportional gain, a tuning paremeter
      double Ki = 0;     ///< The integral gain, a tuning paremeter
      double Kd = 0;     ///< The derivative gain, a tuning paremeter

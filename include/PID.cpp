@@ -1,8 +1,10 @@
 /**
  * @breif This is the source file for class PID
+ * @file PID.hpp This is the header file of PID class
+ * @copyright, Shaotu Jia, All rights reserved
  */
 
- #include "PID.hpp"
+#include "PID.hpp"
 
 void PID::tuning(double Kp_input, double Ki_input, double Kd_input) {
     Kp = Kp_input;
@@ -15,31 +17,32 @@ void PID::get_error(const double& process_variable) {
 }
 
 double PID::proportion(const double& e_c) {
-    return e_c * Kp;
+    return (e_c * Kp);
 }
 
 double PID::integrate(const double& e_c) {
     e_total += e_c;
-    return e_total * Ki;
+    return (e_total * Ki);
 }
 
 double PID::diferentiate(const double& e_c, const double& e_l) {
-    return (e_c - e_l) * Kd;
+    return ((e_c - e_l) * Kd);
 }
 
 void PID::compute() {
-    for (int t = 0; t <= run_time; t += time_interval) {
+    for (int t = 0; t <= run_time/time_interval; t++) {
         get_error(process_variable);
-        process_variable = proportion(e_c) + integrate(e_c) + diferentiate(e_c, e_l);
+        process_variable = proportion(e_c) + integrate(e_c)\
+            + diferentiate(e_c, e_l);
         e_l = e_c;    ///< pass current error to last time error
         if (std::abs(e_c) < tolerance) {
-            time_to_stable = t;
+            time_to_stable = t * time_interval;
             break;
         }
     }
 }
 
-PID::~PID(){
+PID::~PID() {
     if (e_c < tolerance) {
         std::cout << "Successful tuning !!\n";
         std::cout << "The current error: " << e_c << "\n";
